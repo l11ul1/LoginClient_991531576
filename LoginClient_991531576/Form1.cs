@@ -28,7 +28,7 @@ namespace LoginClient_991531576
             AuthenticationUserClient client = new AuthenticationUserClient("NetTcpBinding_AuthenticationUser");
             string username = textBox1.Text.ToString();
             string pass = textBox2.Text.ToString();
-            label2.Text = client.Validate(username, pass);
+            label3.Text = client.Validate(username, pass);
 
         }
     }
