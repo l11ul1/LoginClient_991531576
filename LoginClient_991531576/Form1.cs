@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginClient_991531576.ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,15 @@ namespace LoginClient_991531576
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AuthenticationUserClient client = new AuthenticationUserClient("NetTcpBinding_AuthenticationUser");
+            string username = textBox1.Text.ToString();
+            string pass = textBox2.Text.ToString();
+            label2.Text = client.Validate(username, pass);
 
         }
     }
